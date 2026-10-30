@@ -71,7 +71,7 @@ print("✅ Banco de dados 'dados_cobranca.db' criado e populado com sucesso com 
 query_sql = """
 SELECT 
     grupo_experimento,
-    COUNT(id_cliente) AS total_clientes,
+    COUNT(*) AS total_clientes,
     SUM(pago) AS total_pagadores,
     ROUND(SUM(valor_divida), 2) AS divida_total,
     ROUND(SUM(valor_recuperado), 2) AS total_recuperado
